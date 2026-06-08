@@ -179,6 +179,7 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
+      <ProductTourModal open={tourOpen} onOpenChange={setTourOpen} />
     </section>
   );
 }
