@@ -59,12 +59,13 @@ export function Hero() {
                 Book a Demo
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
               </a>
-              <a
-                href="#tour"
+              <button
+                type="button"
+                onClick={() => setTourOpen(true)}
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-full glass font-semibold text-navy hover:bg-white transition-colors"
               >
                 <Play size={14} /> Watch Product Tour
-              </a>
+              </button>
             </motion.div>
 
             <motion.div
