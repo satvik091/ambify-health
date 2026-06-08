@@ -1,29 +1,44 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SiteNav } from "@/components/site/SiteNav";
+import { Hero } from "@/components/site/Hero";
+import {
+  Trust, Problem, Solution, HowItWorks, DemoSim, Features,
+  Specialties, DashboardSection, Integrations, Security,
+  Testimonials, CaseStudies, FAQ, FinalCTA, SiteFooter,
+} from "@/components/site/Sections";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Clario — Ambient Clinical Intelligence for Healthcare" },
+      { name: "description", content: "AI-powered ambient clinical intelligence that turns doctor-patient conversations into structured medical records — instantly." },
+      { property: "og:title", content: "Clario — Ambient Clinical Intelligence" },
+      { property: "og:description", content: "Turn clinical conversations into structured medical records with enterprise-grade AI." },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="min-h-dvh bg-background">
+      <SiteNav />
+      <Hero />
+      <Trust />
+      <Problem />
+      <Solution />
+      <HowItWorks />
+      <DemoSim />
+      <Features />
+      <Specialties />
+      <DashboardSection />
+      <Integrations />
+      <Security />
+      <Testimonials />
+      <CaseStudies />
+      <FAQ />
+      <FinalCTA />
+      <SiteFooter />
+    </main>
   );
 }
