@@ -30,7 +30,7 @@ export function ProductTourModal({ open, onOpenChange }: { open: boolean; onOpen
             <div className="relative aspect-video lg:aspect-auto lg:h-full w-full bg-black">
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src="https://drive.google.com/file/d/1wJS79ZzBzMEjeaYdrxBNaIb2Wthnf-Ld/view?usp=sharing"
+                src="https://youtu.be/FPKUwSuz5D4"
                 title="Clario Product Tour"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
