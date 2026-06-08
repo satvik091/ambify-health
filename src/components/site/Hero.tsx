@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Play, ArrowRight, Mic, Activity, FileText, Shield, Sparkles, CheckCircle2 } from "lucide-react";
+import { ProductTourModal } from "./ProductTourModal";
 
 const bars = Array.from({ length: 28 });
 
 export function Hero() {
+  const [tourOpen, setTourOpen] = useState(false);
   return (
     <section id="top" className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden">
       {/* mesh + grid */}
@@ -56,12 +59,13 @@ export function Hero() {
                 Book a Demo
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
               </a>
-              <a
-                href="#tour"
+              <button
+                type="button"
+                onClick={() => setTourOpen(true)}
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-full glass font-semibold text-navy hover:bg-white transition-colors"
               >
                 <Play size={14} /> Watch Product Tour
-              </a>
+              </button>
             </motion.div>
 
             <motion.div
@@ -175,6 +179,7 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
+      <ProductTourModal open={tourOpen} onOpenChange={setTourOpen} />
     </section>
   );
 }
