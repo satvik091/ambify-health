@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Play, ArrowRight, Mic, Activity, FileText, Shield, Sparkles, CheckCircle2 } from "lucide-react";
+import { ProductTourModal } from "./ProductTourModal";
 
 const bars = Array.from({ length: 28 });
 
