@@ -6,6 +6,7 @@ import { ProductTourModal } from "./ProductTourModal";
 const bars = Array.from({ length: 28 });
 
 export function Hero() {
+  const [tourOpen, setTourOpen] = useState(false);
   return (
     <section id="top" className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden">
       {/* mesh + grid */}
